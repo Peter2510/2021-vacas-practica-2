@@ -15,7 +15,7 @@ public class Principal {
 
         int menu = 0;
 
-        while(menu != 9){
+        while(menu != 10){
 
 
             System.out.println("\n\n_______________________________   MENU   ______________________________________");
@@ -37,7 +37,17 @@ public class Principal {
 
         
             if (menu == 1 ){
-                //ALQUILAR PELICULAS
+                
+                if (tablaPeliculas.getContador()==1) {
+
+                    System.out.println("Aun no hay peliculas registradas");
+                    
+                }
+
+                else{
+
+                }
+
                 
             }
 

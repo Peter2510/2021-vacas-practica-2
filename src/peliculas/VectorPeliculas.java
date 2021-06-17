@@ -72,6 +72,14 @@ public class VectorPeliculas {
 
     }
 
+    public int getContador(){
+
+        return contador;
+
+    }
+
+
+
 
     
 }
