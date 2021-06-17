@@ -22,8 +22,8 @@ public class VectorClientes {
     }
 
     public void agregarCliente(){
-        String nombre = IngresoDatos.getTexto("Ingrese el nombre del cliente");
-        int telefono = IngresoDatos.getEntero("Ingrese el número de telefono", false);
+        String nombre = IngresoDatos.getTexto("Ingrese el nombre del cliente: ");
+        int telefono = IngresoDatos.getEntero("Ingrese el número de telefono: ", false);
         agregarCliente(nombre, telefono);
     }
 

@@ -98,7 +98,7 @@ public class Principal {
             }
             if (menu == 5){
 
-                //ordnear ascendente
+                //ordenar los clientes de forma ascendente
                 System.out.println("Desordenado:");
                 tablaClientes.mostrarClientes();
                 System.out.println("\n\nOrdenado:");
@@ -106,7 +106,7 @@ public class Principal {
                 tablaClientes.mostrarClientes();
             }
             if (menu == 6){
-                //ordnear descendente
+                //ordnear clientes de formadescendente
                 System.out.println("Desordenado:");
                 tablaClientes.mostrarClientes();
                 System.out.println("\n\nOrdenado:");
@@ -114,24 +114,13 @@ public class Principal {
                 tablaClientes.mostrarClientes();
             }
             if (menu == 7){
-                 System.out.println("\nBienvenido al registro de clientes");
+                System.out.println("\n ****   Bienvenido al registro de clientes   ****\n");
                 tablaClientes.agregarCliente();
             }
 
 
-            if (menu == 7){
-
-                
-
-                //mostrar clientes
-                System.out.println("Desordenado:");
-                tablaClientes.mostrarClientes();
-                System.out.println("\n\nOrdenado:");
-                tablaClientes.ordenarPorNombre(false);
-                tablaClientes.mostrarClientes();
-            }
-
             if (menu == 8){
+                 System.out.println("\n ****   Clientes registrados   ****\n");
                 tablaClientes.mostrarClientes();
             
             }
