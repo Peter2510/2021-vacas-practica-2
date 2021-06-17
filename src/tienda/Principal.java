@@ -24,14 +24,14 @@ public class Principal {
             System.out.println("2. Devolucion de peliculas ");
             System.out.println("3. Mostrar datos de las peliculas ");
             System.out.println("4. Registrar nueva pelicula ");
-            System.out.println("5. Ordenar clientes ascentemente respecto al nombre");
-            System.out.println("6. Ordenar clientes descendente respecto al nombre");
+            System.out.println("5. Ordenar clientes ascentemente respecto al nombre: " );
+            System.out.println("6. Ordenar clientes descendente respecto al nombre: " );
             System.out.println("7. Registrar nuevos clientes");
             System.out.println("8. Mostrar clientes registrados");
             System.out.println("9. Reportes");
             System.out.println("10. Salir");
     
-            menu = IngresoDatos.getEntero("Ingrese la opción ", false);
+            menu = IngresoDatos.getEntero("Ingrese una opción: ", false);
 
 
 
@@ -40,7 +40,11 @@ public class Principal {
                 
                 if (tablaPeliculas.getContador()==1) {
 
-                    System.out.println("Aun no hay peliculas registradas");
+                    
+                    System.out.println("\n************************************");
+                    System.out.println("\nAun no hay peliculas registradas\n");
+                    System.out.println("************************************");
+
                     
                 }
 
@@ -56,8 +60,24 @@ public class Principal {
             }
             if (menu == 3){
 
-                //mostrar peliculas
+                 if (tablaPeliculas.getContador()==1) {
+
+                    
+                    System.out.println("\n************************************");
+                    System.out.println("\nAun no hay peliculas registradas\n");
+                    System.out.println("************************************");
+
+                    
+                }
+
+                else {
+
+                    //mostrar peliculas
                 tablaPeliculas.mostrarPeliculas();
+                    
+                }
+
+                
                 
             }
 

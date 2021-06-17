@@ -28,9 +28,9 @@ public class VectorPeliculas {
     }
 
     public void agregarPelicula(){
-        String nombre = IngresoDatos.getTexto("Ingrese el nombre de la pelicula:");
+        String nombre = IngresoDatos.getTexto("Ingrese el nombre de la pelicula: ");
         int anio = IngresoDatos.getEntero("Ingrese el año de publicacion de la pelicula: ", false);
-        String categoria = IngresoDatos.getTexto("Ingrese la categoria");
+        String categoria = IngresoDatos.getTexto("Ingrese la categoria: ");
         boolean disponible = true;
         agregarPelicula(nombre, anio, categoria, disponible);
     }
