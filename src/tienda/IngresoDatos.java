@@ -20,7 +20,7 @@ public class IngresoDatos {
 
         if (tmp<0){
             do{
-                imprimirMensaje("\n\n No puede ingresar números negativos\n");
+                imprimirMensaje("\nNo puede ingresar números negativos\n");
                 imprimirMensaje(mensaje);
                 tmp = scanner.nextInt();
             } while(tmp<0);

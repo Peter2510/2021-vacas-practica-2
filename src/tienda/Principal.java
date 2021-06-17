@@ -60,7 +60,7 @@ public class Principal {
                 //mostrar peliculas
                 tablaPeliculas.mostrarPeliculas();
             }
-            if (menu == 4){
+            if (menu == 7){
                 //mostrar clientes
                 System.out.println("Desordenado:");
                 tablaClientes.mostrarClientes();

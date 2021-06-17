@@ -19,7 +19,7 @@ public class VectorPeliculas {
     public void agregarPelicula(String nombre, int anio, String categoria, boolean disponible){
 
         if (contador > 50){
-            System.out.println("Límite de las peliculas ha sido alcanzado");
+            System.out.println("No es posible agreagar mas peliculas");
         }
         else{
             peliculas[(contador-1)] = new Pelicula(contador, nombre, anio, categoria, disponible);
@@ -28,8 +28,8 @@ public class VectorPeliculas {
     }
 
     public void agregarPelicula(){
-        String nombre = IngresoDatos.getTexto("Ingrese el nombre de la pelicula");
-        int anio = IngresoDatos.getEntero("Ingrese el año de publicacion de la pelicula", false);
+        String nombre = IngresoDatos.getTexto("Ingrese el nombre de la pelicula:");
+        int anio = IngresoDatos.getEntero("Ingrese el año de publicacion de la pelicula: ", false);
         String categoria = IngresoDatos.getTexto("Ingrese la categoria");
         boolean disponible = true;
         agregarPelicula(nombre, anio, categoria, disponible);
@@ -38,7 +38,8 @@ public class VectorPeliculas {
 
 
    public void mostrarPeliculas(){
-        System.out.println("\n\n Peliculas de memorabilia");
+
+        System.out.println("\nPeliculas de memorabilia");
         for (int i = 0; i < (contador-1); i++) {
             System.out.println(i+") "+peliculas[i].getInformacion());
             
@@ -56,11 +57,11 @@ public class VectorPeliculas {
             for (int j = 0; j < (contador-1-i); j++) {
                 
                 if (ascendente)
-                    cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) > 0 );
+                    intercambioLugar = (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) > 0 );
                 else 
-                    cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) < 0 );
+                    intercambioLugar = (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) < 0 );
 
-                if(cambio ){
+                if(intercambioLugar){
                 
                     Pelicula aux = peliculas[j];
                     peliculas[j] = peliculas[j+1];
