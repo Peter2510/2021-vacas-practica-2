@@ -15,7 +15,7 @@ public class Principal {
 
         int menu = 0;
 
-        while(menu != 10){
+        while(menu != 12){
 
 
             System.out.println("\n\n_______________________________   MENU   ______________________________________");
@@ -25,11 +25,13 @@ public class Principal {
             System.out.println("3. Mostrar datos de las peliculas ");
             System.out.println("4. Registrar nueva pelicula ");
             System.out.println("5. Ordenar clientes ascentemente respecto al nombre: " );
-            System.out.println("6. Ordenar clientes descendente respecto al nombre: " );
+            System.out.println("6. Ordenar clientes descendentemente respecto al nombre: " );
             System.out.println("7. Registrar nuevos clientes");
             System.out.println("8. Mostrar clientes registrados");
-            System.out.println("9. Reportes");
-            System.out.println("10. Salir");
+            System.out.println("9. Ordenar peliculas ascentemente respecto al nombre: " );
+            System.out.println("10. Ordenar peliculas descendentemente respecto al nombre: " );
+            System.out.println("11. Reportes");
+            System.out.println("12. Salir");
     
             menu = IngresoDatos.getEntero("Ingrese una opción: ", false);
 
@@ -73,7 +75,7 @@ public class Principal {
                 else {
 
                     //mostrar peliculas
-                tablaPeliculas.mostrarPeliculas();
+                    tablaPeliculas.mostrarPeliculas();
                     
                 }
 
@@ -128,9 +130,27 @@ public class Principal {
             
             }
 
-           /* if (menu==9){
+             if (menu == 9){
+                
+                 //ordenar las peliculas ascendentes
+                System.out.println("Desordenado:");
+                tablaPeliculas.mostrarPeliculas();
+                System.out.println("\n\nOrdenado:");
+                tablaPeliculas.ordenarPorNombre(true);
+                tablaPeliculas.mostrarPeliculas();
+            
+            }
 
-            }  */
+             if (menu == 10){
+                //ordnear descendentemente las peliculas
+                System.out.println("Desordenado:");
+                tablaPeliculas.mostrarPeliculas();
+                System.out.println("\n\nOrdenado:");
+                tablaPeliculas.ordenarPorNombre(false);
+                tablaPeliculas.mostrarPeliculas();
+            }
+
+          
         }
 
     }
