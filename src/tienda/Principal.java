@@ -161,7 +161,12 @@ public class Principal {
 
                 System.out.println("\n ***** Reporte de las peliculas ***** ");
                 System.out.println("\nCantidad de peliculas en la tienda: " + (tablaPeliculas.getContador()-1) );
-                
+                System.out.println("\nPeliculas por categoria\n");
+                System.out.println("Peliculas de drama registradas: "+tablaPeliculas.getContadorDrama());
+                System.out.println("Peliculas de romance registradas: " +tablaPeliculas.getContadorRomantica());
+                System.out.println("Peliculas de accion registradas: " +tablaPeliculas.getContadorAccion());
+                System.out.println("Peliculas de comedia registradas: " +tablaPeliculas.getContadorComedia());
+
 
             }
 

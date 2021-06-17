@@ -52,7 +52,7 @@ public class Pelicula {
 
     public String getInformacion(){
         System.out.println("\n");
-        String resultado = "Id: "+id+ " Año de publicacion: " + anio  +" Categoria " + categoria +  " Nombre de la pelicula: " + nombre +" Disponible: " + disponible ;
+        String resultado = "Id: "+id+ " Año de publicacion: " + anio  +" Categoria: " + categoria +  " Nombre de la pelicula: " + nombre +" Disponible: " + disponible ;
         return resultado;
     }
     
