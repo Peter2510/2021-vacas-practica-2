@@ -16,13 +16,13 @@ public class Principal {
         int menu = 0;
 
         while(menu >= 0){
-            System.out.println("Bienvenido a memorabilia \n\n");
-            System.out.println("1) Ingreso de clientes");
-            System.out.println("2) Mostrar clientes");
-            System.out.println("3) Ordenar Clientes Ascente");
-            System.out.println("4) Ordenar Clientes Descendente");
+            System.out.println("\n\n  ***  Bienvenido a memorabilia  *** \n\n");
+            System.out.println("1) Crear clinente ");
+            System.out.println("2) Mostrar clientes registrados");
+            System.out.println("3) Ordenar Clientes Ascentemento respecto al nombre");
+            System.out.println("4) Ordenar Clientes Descendente respecto al nombre");
             System.out.println("5) crear peliculas");
-            System.out.println("6) mostrar pelicuas"); 
+            System.out.println("6) mostrar peliculas registradas"); 
             System.out.println("-1) Salir");
             System.out.println("\n");
             menu = IngresoDatos.getEntero("Ingrese la opción ", true);
