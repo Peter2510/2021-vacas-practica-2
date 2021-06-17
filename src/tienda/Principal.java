@@ -16,51 +16,75 @@ public class Principal {
         int menu = 0;
 
         while(menu != 9){
-            System.out.println("\n\n  ***  Bienvenido a memorabilia  *** ");
-            System.out.println("\n ***  SELECCIONA  UNA OPCION  *** \n\n");
-            System.out.println("1. Crear registro de cliente ");
-            System.out.println("2. Mostrar clientes registrados en la tienda");
-            System.out.println("3. Ordenar clientes ascentemente respecto al nombre");
-            System.out.println("4. Ordenar clientes descendente respecto al nombre");
-            System.out.println("5. Crear registro de pelicula");
-            System.out.println("6. Mostrar peliculas registradas"); 
-            System.out.println("9) Salir");
-            System.out.println("\n");
+
+
+            System.out.println("\n\n_______________________________   MENU   ______________________________________");
+            System.out.println("\nSelecciona una opcion: ");
+            System.out.println("\n1. Prestamo de peliculas ");
+            System.out.println("2. Devolucion de peliculas ");
+            System.out.println("3. Mostrar datos de las peliculas ");
+            System.out.println("4. Registrar nueva pelicula ");
+            System.out.println("5. Ordenar clientes ascentemente respecto al nombre");
+            System.out.println("6. Ordenar clientes descendente respecto al nombre");
+            System.out.println("7. Registrar nuevos clientes");
+            System.out.println("8. Mostrar clientes registrados");
+            System.out.println("9. Reportes");
+            System.out.println("10. Salir");
+    
             menu = IngresoDatos.getEntero("Ingrese la opción ", false);
 
+
+
+        
             if (menu == 1 ){
-                //ingreso de datos
-                tablaClientes.agregarCliente();
+                //ALQUILAR PELICULAS
+                
             }
+
             if (menu == 2){
-                //mostrar clientes
-                tablaClientes.mostrarClientes();
+                //tablaPeliculas.alquillar();
             }
             if (menu == 3){
-                //mostrar clientes
+
+                //mostrar peliculas
+                tablaPeliculas.mostrarPeliculas();
+                
+            }
+
+            if (menu== 4 ){
+            
+                //crear pelicula
+                tablaPeliculas.agregarPelicula();
+
+            }
+            if (menu == 5){
+
+                //ordnear ascendente
                 System.out.println("Desordenado:");
                 tablaClientes.mostrarClientes();
                 System.out.println("\n\nOrdenado:");
                 tablaClientes.ordenarPorNombre(true);
                 tablaClientes.mostrarClientes();
             }
-            if (menu == 4){
-                //mostrar clientes
+            if (menu == 6){
+                //ordnear descendente
                 System.out.println("Desordenado:");
                 tablaClientes.mostrarClientes();
                 System.out.println("\n\nOrdenado:");
                 tablaClientes.ordenarPorNombre(false);
                 tablaClientes.mostrarClientes();
             }
-            if (menu == 5){
-                //crear pelicula
-                tablaPeliculas.agregarPelicula();
-            }
-            if (menu == 6){
-                //mostrar peliculas
-                tablaPeliculas.mostrarPeliculas();
-            }
             if (menu == 7){
+
+            
+                tablaClientes.agregarCliente();
+            }
+
+
+            if (menu == 7){
+
+                
+
                 //mostrar clientes
                 System.out.println("Desordenado:");
                 tablaClientes.mostrarClientes();
@@ -69,6 +93,14 @@ public class Principal {
                 tablaClientes.mostrarClientes();
             }
 
+            if (menu == 8){
+                tablaClientes.mostrarClientes();
+            
+            }
+
+           /* if (menu==9){
+
+            }  */
         }
 
     }

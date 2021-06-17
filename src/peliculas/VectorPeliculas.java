@@ -19,7 +19,7 @@ public class VectorPeliculas {
     public void agregarPelicula(String nombre, int anio, String categoria, boolean disponible){
 
         if (contador > 50){
-            System.out.println("No es posible agreagar mas peliculas");
+            System.out.println("No es posible agreagar mas peliculas ha sido alcanzado");
         }
         else{
             peliculas[(contador-1)] = new Pelicula(contador, nombre, anio, categoria, disponible);
@@ -57,11 +57,11 @@ public class VectorPeliculas {
             for (int j = 0; j < (contador-1-i); j++) {
                 
                 if (ascendente)
-                    intercambioLugar = (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) > 0 );
+                    cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) > 0 );
                 else 
-                    intercambioLugar = (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) < 0 );
+                    cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) < 0 );
 
-                if(intercambioLugar){
+                if(cambio ){
                 
                     Pelicula aux = peliculas[j];
                     peliculas[j] = peliculas[j+1];
