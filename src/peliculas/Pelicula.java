@@ -5,14 +5,14 @@ public class Pelicula {
 
     private int id;
     private String nombre;
-    private int año;
+    private int anio;
     private String categoria;
     private boolean disponible;
 
-    public Pelicula(int id, String nombre, int año, String categoria, boolean disponible){
+    public Pelicula(int id, String nombre, int anio, String categoria, boolean disponible){
         this.id = id;
         this.nombre = nombre;
-        this.año= año;
+        this.anio= anio;
         this.categoria = categoria;
         this.disponible = disponible;
     }
@@ -23,8 +23,8 @@ public class Pelicula {
         return id;
     }
 
-    public int getAño(){
-        return año;
+    public int getAnio(){
+        return anio;
     }
 
     public String getNombre(){
@@ -35,8 +35,8 @@ public class Pelicula {
         this.nombre = nombre;
     }
 
-    public void setAño(int año){
-        this.año = año;
+    public void setAnio(int anio){
+        this.anio = anio;
     }
 
     public boolean getDisponible(){
@@ -51,7 +51,7 @@ public class Pelicula {
     //fin getters y setters
 
     public String getInformacion(){
-        String resultado = "Id: "+id+" Nombre de la pelicula: " + nombre + " Año de publicacion: " + año + + " Categoria " + categoria + " Disponible: " + disponible;
+        String resultado = "Id: "+id+" Nombre de la pelicula: " + nombre + " Año de publicacion: " + anio + " Categoria " + categoria + " Disponible: " + disponible;
         return resultado;
     }
     

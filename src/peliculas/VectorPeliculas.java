@@ -2,38 +2,38 @@ package src.peliculas;
 
 import src.tienda.*;
 
-public class VectorClientes {
-    private Pelicua[] peliculas = new Pelicua[50];
+public class VectorPeliculas {
+    private Pelicula[] peliculas = new Pelicula[50];
     private int siguienteCodigo;
 
-    public VectorPelicula(){
+    public VectorPeliculas(){
         siguienteCodigo = 1;
     }
 
     //agregar peliculas
-    public void agregarPelicula(String nombre, int año, String categoria, boolean disponible){
+    public void agregarPelicula(String nombre, int anio, String categoria, boolean disponible){
         if (siguienteCodigo > 50){
             System.out.println("Límite de las peliculas ha sido alcanzado");
         }
         else{
-            peliculas[(siguienteCodigo-1)] = new Pelicua(siguienteCodigo, nombre, año, categoria, disponible);
+            peliculas[(siguienteCodigo-1)] = new Pelicula(siguienteCodigo, nombre, anio, categoria, disponible);
         }
         siguienteCodigo++;
     }
 
     public void agregarPelicula(){
         String nombre = IngresoDatos.getTexto("Ingrese el nombre de la pelicula");
-        int año = IngresoDatos.getEntero("Ingrese el año de publicacion de la pelicula", false);
+        int anio = IngresoDatos.getEntero("Ingrese el año de publicacion de la pelicula", false);
         String categoria = IngresoDatos.getTexto("Ingrese la categoria");
         boolean disponible = true;
-        agregarCliente(nombre, año, categoria, disponible);
+        agregarPelicula(nombre, anio, categoria, disponible);
     }
 
 
 
     // fin agregar clientes
 
-    public void mostrarClientes(){
+    public void mostrarPeliculas(){
         System.out.println("\n\n Peliculas de memorabilia");
         for (int i = 0; i < (siguienteCodigo-1); i++) {
             System.out.println(i+") "+peliculas[i].getInformacion());
@@ -60,7 +60,7 @@ public class VectorClientes {
 
                 if(cambio ){
                     //clientes i va antes que clientes j <0 descendente
-                    Cliente aux = peliculas[j];
+                    Pelicula aux = peliculas[j];
                     peliculas[j] = peliculas[j+1];
                     peliculas[j+1]= aux;
                 }
