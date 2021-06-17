@@ -44,13 +44,20 @@ public class Principal {
 
                     
                     System.out.println("\n************************************");
-                    System.out.println("\nAun no hay peliculas registradas\n");
+                    System.out.println("\nDebes registrar al menos un cliente y una pelicula para continuar\n");
                     System.out.println("************************************");
 
                     
                 }
 
                 else{
+
+
+                    System.out.println("\nPeliculas registradas en la tienda\n");
+                    tablaClientes.mostrarClientes();
+                    System.out.println("\nClientes registrados en la tienda\n");
+                    tablaPeliculas.mostrarPeliculas();
+
 
                 }
 
