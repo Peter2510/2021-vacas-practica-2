@@ -161,6 +161,7 @@ public class Principal {
 
                 System.out.println("\n ***** Reporte de las peliculas ***** ");
                 System.out.println("\nCantidad de peliculas en la tienda: " + (tablaPeliculas.getContador()-1) );
+                
 
             }
 
