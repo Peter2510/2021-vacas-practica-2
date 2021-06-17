@@ -40,7 +40,7 @@ public class Principal {
         
             if (menu == 1 ){
                 
-                if (tablaPeliculas.getContador()==1 && tablaClientes.getContador() ==1) {
+                if (tablaPeliculas.getContador()==1 || tablaClientes.getContador() ==1) {
 
                     
                     System.out.println("\n************************************");
@@ -52,10 +52,10 @@ public class Principal {
 
                 else{
 
-
+                    System.out.println("\n______________________________________");
                     System.out.println("\nPeliculas registradas en la tienda\n");
                     tablaClientes.mostrarClientes();
-                    System.out.println("\nClientes registrados en la tienda\n");
+                    System.out.println("Clientes registrados en la tienda");
                     tablaPeliculas.mostrarPeliculas();
 
 
@@ -91,7 +91,7 @@ public class Principal {
             }
 
             if (menu== 4 ){
-            
+              System.out.println("\n ****   Bienvenido al registro de peliculas   ****\n");
                 //crear pelicula
                 tablaPeliculas.agregarPelicula();
 
@@ -114,8 +114,7 @@ public class Principal {
                 tablaClientes.mostrarClientes();
             }
             if (menu == 7){
-
-            
+                 System.out.println("\nBienvenido al registro de clientes");
                 tablaClientes.agregarCliente();
             }
 
@@ -157,7 +156,15 @@ public class Principal {
                 tablaPeliculas.mostrarPeliculas();
             }
 
-          
+             if (menu == 11){
+                //Reporte de las peliculas
+
+                System.out.println("\n ***** Reporte de las peliculas ***** ");
+                System.out.println("\nCantidad de peliculas en la tienda: " + (tablaPeliculas.getContador()-1) );
+
+            }
+
+              
         }
 
     }

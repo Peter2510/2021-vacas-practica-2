@@ -39,7 +39,6 @@ public class VectorPeliculas {
 
    public void mostrarPeliculas(){
 
-        System.out.println("\n\n           **********   Peliculas de memorabilia   **********\n");
         for (int i = 0; i < (contador-1); i++) {
             System.out.println(peliculas[i].getInformacion());
             
