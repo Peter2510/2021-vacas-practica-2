@@ -6,7 +6,7 @@ import src.clientes.VectorClientes;
 public class Principal {
 
     public static void main(String[] args){
-        Principal p = new Principal();
+        Principal paginaPrincipal = new Principal();
     }
 
     private VectorClientes tablaClientes = new VectorClientes();
@@ -15,17 +15,18 @@ public class Principal {
 
         int menu = 0;
 
-        while(menu >= 0){
-            System.out.println("\n\n  ***  Bienvenido a memorabilia  *** \n\n");
-            System.out.println("1) Crear clinente ");
-            System.out.println("2) Mostrar clientes registrados");
-            System.out.println("3) Ordenar Clientes Ascentemento respecto al nombre");
-            System.out.println("4) Ordenar Clientes Descendente respecto al nombre");
-            System.out.println("5) crear peliculas");
-            System.out.println("6) mostrar peliculas registradas"); 
-            System.out.println("-1) Salir");
+        while(menu != 9){
+            System.out.println("\n\n  ***  Bienvenido a memorabilia  *** ");
+            System.out.println("\n ***  SELECCIONA  UNA OPCION  *** \n\n");
+            System.out.println("1. Crear registro de cliente ");
+            System.out.println("2. Mostrar clientes registrados en la tienda");
+            System.out.println("3. Ordenar clientes ascentemente respecto al nombre");
+            System.out.println("4. Ordenar clientes descendente respecto al nombre");
+            System.out.println("5. Crear registro de pelicula");
+            System.out.println("6. Mostrar peliculas registradas"); 
+            System.out.println("9) Salir");
             System.out.println("\n");
-            menu = IngresoDatos.getEntero("Ingrese la opción ", true);
+            menu = IngresoDatos.getEntero("Ingrese la opción ", false);
 
             if (menu == 1 ){
                 //ingreso de datos

@@ -3,22 +3,28 @@ package src.peliculas;
 import src.tienda.*;
 
 public class VectorPeliculas {
+
+
     private Pelicula[] peliculas = new Pelicula[50];
-    private int siguienteCodigo;
+
+    private int contador;
 
     public VectorPeliculas(){
-        siguienteCodigo = 1;
+
+
+        contador = 1;
     }
 
-    //agregar peliculas
+
     public void agregarPelicula(String nombre, int anio, String categoria, boolean disponible){
-        if (siguienteCodigo > 50){
+
+        if (contador > 50){
             System.out.println("Límite de las peliculas ha sido alcanzado");
         }
         else{
-            peliculas[(siguienteCodigo-1)] = new Pelicula(siguienteCodigo, nombre, anio, categoria, disponible);
+            peliculas[(contador-1)] = new Pelicula(contador, nombre, anio, categoria, disponible);
         }
-        siguienteCodigo++;
+        contador++;
     }
 
     public void agregarPelicula(){
@@ -31,13 +37,10 @@ public class VectorPeliculas {
 
 
 
-    // fin agregar clientes
-
-    public void mostrarPeliculas(){
+   public void mostrarPeliculas(){
         System.out.println("\n\n Peliculas de memorabilia");
-        for (int i = 0; i < (siguienteCodigo-1); i++) {
+        for (int i = 0; i < (contador-1); i++) {
             System.out.println(i+") "+peliculas[i].getInformacion());
-            //System.out.println("-"+i+") "+clientes[i].getId() + " nombre "+clientes[i].getNombre()+ " telefono "+clientes[i].getTelefono());
             
         }
 
@@ -49,17 +52,16 @@ public class VectorPeliculas {
     public void ordenarPorNombre(boolean ascendente){
         boolean cambio = true;
 
-        for (int i = 1; i < (siguienteCodigo-1); i++) {
-            for (int j = 0; j < (siguienteCodigo-1-i); j++) {
-                //  String.compareTo(String)
-                //   [-oo , + oo]
+        for (int i = 1; i < (contador-1); i++) {
+            for (int j = 0; j < (contador-1-i); j++) {
+                
                 if (ascendente)
                     cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) > 0 );
                 else 
                     cambio= (peliculas[j].getNombre().compareTo(peliculas[j+1].getNombre()) < 0 );
 
                 if(cambio ){
-                    //clientes i va antes que clientes j <0 descendente
+                
                     Pelicula aux = peliculas[j];
                     peliculas[j] = peliculas[j+1];
                     peliculas[j+1]= aux;
