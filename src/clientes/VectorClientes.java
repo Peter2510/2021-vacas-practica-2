@@ -67,6 +67,12 @@ public class VectorClientes {
 
     }
 
+    public int getContador(){
+
+        return siguienteCodigo;
+
+    }
+
 
     
 }

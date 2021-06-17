@@ -40,7 +40,7 @@ public class Principal {
         
             if (menu == 1 ){
                 
-                if (tablaPeliculas.getContador()==1) {
+                if (tablaPeliculas.getContador()==1 && tablaClientes.getContador() ==1) {
 
                     
                     System.out.println("\n************************************");
